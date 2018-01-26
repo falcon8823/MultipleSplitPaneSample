@@ -3,13 +3,14 @@ import { NavController, IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-tabs',
+  templateUrl: 'tabs.html'
 })
-export class HomePage {
+export class TabsPage {
+  tabProjectRoot: any
+  tabContactRoot: any
+  tabChatRoot: any
 
   constructor(public navCtrl: NavController) {
-
   }
-
 }
