@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MasterPageBase } from '../../../libs/master-detail-pane';
 
 /**
  * Generated class for the ChatMasterPage page.
@@ -13,9 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-chat-master',
   templateUrl: 'chat-master.html',
 })
-export class ChatMasterPage {
+export class ChatMasterPage extends MasterPageBase {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    super()
   }
 
   ionViewDidLoad() {

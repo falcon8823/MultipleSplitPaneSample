@@ -1,25 +1,24 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ProjectMasterPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { MasterDetailPane, MasterPageBase } from '../../../libs/master-detail-pane';
 
 @IonicPage()
 @Component({
   selector: 'page-project-master',
   templateUrl: 'project-master.html',
 })
-export class ProjectMasterPage {
+export class ProjectMasterPage extends MasterPageBase {
+  items = ['foo', 'bar', 'baz']
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private mdPane: MasterDetailPane,
+  ) {
+    super()
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProjectMasterPage');
+  openDetail(item) {
+    this.mdPane.setRootToDetail('ProjectDetailPage', { item })
   }
-
 }
