@@ -1,0 +1,5 @@
+<ion-split-pane (ionChange)="onSplitPaneChanged($event._visible)">
+  <ion-nav [root]="masterPage" #master></ion-nav>
+
+  <ion-nav [root]="detailPage" main #detail></ion-nav>
+</ion-split-pane>

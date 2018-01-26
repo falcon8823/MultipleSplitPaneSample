@@ -1,0 +1,27 @@
+master-detail-pane {
+  // スマホビューでside側を表示するように修正
+  // https://medium.com/@blewpri/master-detail-with-ionic-3-split-panes-866293608d47
+  .split-pane-side:not(ion-menu) {
+    display: initial;
+  }
+  .split-pane-main {
+    display: none;
+  }
+
+  .split-pane-visible {
+    &.split-pane-ios, &.split-pane-md {
+      &> {
+        .split-pane-main {
+          display: block;
+        }
+        .split-pane-side {
+          // 幅を広げる
+          max-width: 350px;
+          width: 30%;
+          min-width: auto;
+        }
+      }
+    }
+
+  }
+}
