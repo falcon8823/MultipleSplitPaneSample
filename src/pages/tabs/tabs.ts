@@ -7,9 +7,9 @@ import { NavController, IonicPage } from 'ionic-angular';
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-  tabProjectRoot: any
-  tabContactRoot: any
-  tabChatRoot: any
+  tabProjectRoot: any = 'ProjectPanePage'
+  tabContactRoot: any = 'ContactPanePage'
+  tabChatRoot: any = 'ChatPanePage'
 
   constructor(public navCtrl: NavController) {
   }
